@@ -1,0 +1,356 @@
+@import "componentes/variables";
+// 8k    7.680 x 4.320
+// DESKTOP
+// @media screen and (min-width: 960)	{ }
+
+// MOVIL
+// @media screen and (min-width:0px) and (max-width:959px) { }
+
+// TIPO DE PRODUCTO
+// .titulotienda
+//     {    margin-top: 36px; }
+// .sectiontienda
+//     {   display: flex;
+//         flex-wrap: wrap;
+//         justify-content: space-between; }
+// .clica
+//     {   width: 216px;
+//         background-color: map-get($colores,magenta100m55k);
+//         color: map-get($colores,negro11k);
+//         border: 1px solid map-get($colores,negro97k);
+//         &:hover {
+//             background-color: map-get($colores,magenta100m77k);
+//             border: 1px solid map-get($colores,negro97k);
+//             box-shadow: 3px 3px 9px map-get($colores,negro55k);
+//             color: #ffffff; } }
+
+// .marpadd { @extend %marginypaddign0; }
+
+// .selectpieza {
+//         background-color: map-get($colores,negro11k);
+//         color: map-get($colores,negro93k);
+//         font-size: 12px; }
+
+// .pcolores
+// 	{	padding: 2px 0 -5px 0;
+// 		box-sizing: border-box;
+// 		margin: 0 auto;
+// 		border: solid 1px white;
+// 		height: 15px;
+// 		width: 15px; 
+//         &:hover {
+//         	box-shadow: 1px 1px 3px #333132;
+//             height: 16px;
+//             width: 16px; } }
+
+// ELEMENTOS NUEVOS DE LA TIENDA
+    .divservycar { display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 }
+
+    /* PLANES Y SERVICIOS */
+    .sectservicio { border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        width: 288px;
+        cursor: pointer;
+        background-color: #f9f9f9; }
+
+    .tituloarmatuplan { font-weight: 800;
+        text-align: center; }
+
+    .sectservicio:hover { cursor: text; }
+
+    .tituloservicio { font-size: 18px;
+        background-color: #393839;
+        text-align: center;
+        width: 100%;
+        color: white;
+        align-items: center;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        margin-top: 0;
+        margin-bottom: 0; }
+
+    .parrservicio { font-style: oblique;
+        margin: 3px 6px; }
+
+    .btnagragar { cursor: pointer;
+        background-color: #83004C;
+        color: white;
+        font-size: 14px;
+        border-color: #83004C;
+        border-radius: 0 9px;
+        padding: 7px 12px;
+        display: block;
+        margin: 0 auto 9px auto;
+        font-weight: 800; }
+
+    .btnagragar:hover {  background-color: #51002f; }
+
+    .artservicio { display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; } 
+        
+    @media screen and (min-width: 1525px) and (max-width: 3840px) {
+         .artservicio { width: 1080px; } }
+
+    @media screen and (min-width: 1000px) and (max-width: 1525px) {
+         .artservicio { width: 600px;; } }
+
+    @media screen and (min-width: 0px) and (max-width: 1000px) {
+        .artservicio {  width: 288px;
+            display: inline; } }
+
+    /* CARRITO */
+    .divcar { width: 288px;
+        top: 108px;
+        right: 136px;
+        font-size: 13px;
+        background-color: white;
+        border: 3px solid #83004C;
+        border-radius: 0 18px;
+        position: fixed;
+        @media screen and (min-width:0px) and (max-width:959px) {
+            top: 99px;
+            right: 45px; } }
+
+    .titulocar { text-align: center;
+        font-size: 17px;
+        font-weight: 900;
+        margin: 0;
+        padding: 7px 0;
+        background-color: #83004C;
+        border-radius: 0 12px 0 0;
+        color: white; }
+
+    // .interiorcar { font-size: 14px; }
+
+    .ulcardatos {   background-color: #393839;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 3px 9px;
+        font-size: 14px;
+        font-weight: bold;
+        align-items: center;
+        text-align: center; }
+
+    .licardatos { list-style: none; }
+
+    /* Este UL ahora tiene el ID "itemsCarrito" */
+    .ulcaritems { height: 144px;
+		overflow: scroll;
+        padding-left: 3px;
+        padding-right: 3px;
+        text-align: left; }
+
+    .textoredess { text-align: center;
+        font-weight: bold;
+        margin-bottom: 0;
+        font-size: 16px; }
+
+    .mensaje-alerta {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+  /* Nuevo estilo para el botón X de eliminar */
+    .licaritem { list-style: none;
+        display: flex; /* Añadido para habilitar flexbox para el espaciado */
+        align-items: center; /* Alinea los ítems verticalmente */ }
+
+    .licaritem .btn-eliminar-item {
+        background-color: #83004C; /* Morado de PubliZoom */
+        color: white;
+        border: 1px solid #83004C; /* Borde del mismo color */
+        cursor: pointer;
+        margin-right: 5px; /* Margen para separar de la cantidad */
+        padding: 1px 4px; /* Ajusta el padding para el tamaño de la X */
+        font-weight: 800;
+        font-size: 10px; /* Tamaño del botón X vuelto a como estaba en tu código original */
+        border-radius: 3px; /* Bordes ligeramente redondeados */ }
+
+    .licaritem .btn-eliminar-item:hover {
+        background-color: #51002f; /* Un morado más oscuro al pasar el mouse */ }
+
+    .licaritem input[type="number"] { /* Estilo para el input de cantidad */
+        width: 36px;
+        margin-right: 20px; /* Separación de la descripción */ }
+    
+    /* INCLUIR REDES CARRITO */
+    .ulredess { display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        font-size: 24px; }
+
+    .liredess { list-style: none; }
+
+    .contenedorprecios { display: flex;
+        margin: 0;
+        padding: 0; }
+
+    .precios { text-align: right;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        font-weight: 400; }
+
+    .costoscarrito { margin: 0;
+        padding: 3px 9px;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+        background-color: map-get($colores,amarillo33a); }
+    
+    .totalapagar { font-weight: bolder;
+        text-align: center;
+        width: 282px;
+        background-color: map-get($colores,amarillo100a); }
+
+    .preciototal-car {
+        margin-left: auto; /* Esto empuja el elemento a la derecha dentro de un contenedor flex */
+        text-align: right; }
+
+    .limimppago { display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        border-top: map-get($colores,negro11k) solid 0.5px;
+        border-bottom: map-get($colores,negro11k) solid 0.5px;
+        margin-bottom: 9px;
+        padding: 0 9px;
+        font-size: 14px; }
+
+    .vaciar-carrito { font-weight: bold;
+        font-style: italic;
+        text-align: right;
+        padding: 0 0 3px 3px;
+        text-decoration: underline;
+        background-color: white;
+        color: #83004C;
+        border: none;
+        cursor: pointer; }
+
+    .btn-imprimir { color: map-get($colores,magenta100m77k);
+        font-size: 18px;
+        &:hover { cursor: pointer; } }
+
+    .gestpago { background-color: map-get($colores,azul44c);
+        color: black;
+        margin: 3px 0;
+        padding: 6px 15px;
+        border-radius: 0 9px;
+        text-decoration: none;
+        font-weight: 900;
+        &:hover {
+            background-color: map-get($colores,azul100c44k);
+            color: white; } }
+
+    .gestpago.disabled { background-color: #cccccc;
+        cursor: not-allowed;
+        opacity: 0.7; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .tienda
+// 	{
+// 		display: none;
+// 	}
+// TARGET
+
+// .adeformado
+// 	{
+// 		margin: -3px 0 0 0;
+// 		height: 30px;
+// 		// display: flex;
+// 	}
+
+
+.lipadre
+	{	margin: 0;
+		padding: 0; }
+
+
+// .ultienda
+// 	{	display: none; }
+
+.ultienda
+	{	margin-top: 9px;
+		position: absolute;
+		right: 0;
+		padding: 0; }
+.litienda
+	{	background-color: rgba(#ffffff, 0.9);
+		box-shadow: 1px 1px 12px map-get($colores,negro93k);
+		list-style: none;
+		box-sizing: border-box; }
+.atienda
+	{	text-align: center;
+		display: block;
+		padding: 6px 15px;
+		&:hover {
+			background-color: map-get($colores,magenta100m55k);
+			color: #ffffff; }
+		&:active {
+			background-color: map-get($colores,magenta100m55k);
+			color: #ffffff; } }
