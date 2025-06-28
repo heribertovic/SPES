@@ -1,0 +1,57 @@
+@import "variables";
+// 8k    7.680 x 4.320
+// DESKTOP
+// @media screen and (min-width: 960)	{ }
+
+// MOVIL
+// @media screen and (min-width:0px) and (max-width:959px) { }
+
+// QUIENES SOMOS
+// .pie
+// 	{	padding: 0;
+// 		margin-bottom: 0; }
+/* Asegúrate de que esta sección esté en tu archivo CSS */
+
+
+
+
+/*
+  Este es un ejemplo de tu archivo CSS.
+  Asegúrate de copiar y pegar esto en tu archivo CSS principal,
+  donde defines las reglas para .spa-view.
+*/
+
+/*
+  Tu CSS existente iría aquí arriba.
+  A continuación, las reglas específicas para la SPA.
+*/
+
+
+/* ==========================================================================
+   Sección SPA (Single Page Application)
+   ========================================================================== */
+
+/* Oculta todas las vistas por defecto */
+.spa-view {
+    display: none;
+    /* Si tienes transiciones de opacidad, podrías añadirlas aquí: */
+    /* opacity: 0; */
+    /* transition: opacity 0.5s ease-in-out; */
+}
+
+/* Muestra la vista activa y la fuerza a ser visible */
+#inyectarSPA .spa-view.active-spa-view {
+    display: block !important; /* ¡Esta es la línea crucial! */
+    /* Si usas transiciones, asegúrate que la opacidad también se active: */
+    /* opacity: 1; */
+}
+
+
+/* ==========================================================================
+   Fin de Sección SPA
+   ========================================================================== */
+
+
+/*
+  El resto de tu CSS puede ir aquí abajo.
+*/

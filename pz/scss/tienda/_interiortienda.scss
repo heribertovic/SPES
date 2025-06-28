@@ -1,0 +1,316 @@
+@import "../../../scss/componentes/variables";
+// 8k    7.680 x 4.320
+// DESKTOP
+// @media screen and (min-width: 960)	{ }
+
+// MOVIL
+// @media screen and (min-width:0px) and (max-width:959px) { }
+
+// TIPO DE PRODUCTO
+// .titulotienda
+//     {    margin-top: 36px; }
+
+// .marpadd { @extend %marginypaddign0; }
+
+    // ELEMENTOS NUEVOS DE LA TIENDA
+.divservycar { display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 }
+
+    /* PLANES Y SERVICIOS */
+.tituloarmatuplan { font-weight: 800;
+    text-align: center; }
+
+.artservicio { display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+    @media screen and (min-width: 1525px) and (max-width: 3840px) {
+        width: 1080px; }
+    @media screen and (min-width: 1000px) and (max-width: 1525px) {
+        width: 600px;; }
+    @media screen and (min-width: 0px) and (max-width: 1000px) {
+        width: 288px;
+        display: inline; } }
+
+.sectservicio { border: 1px solid map-get($colores,negro33k);
+    margin-bottom: 10px;
+    width: 288px;
+    cursor: pointer;
+    background-color: white; }
+
+.sectservicio:hover { cursor: text; }
+
+.h3titservtienda { font-size: 18px;
+    background-color: map-get($colores,negro93k);
+    text-align: center;
+    color: white;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-top: 0;
+    margin-bottom: 0; }
+
+.parrservicio { font-style: oblique;
+    margin: 3px 6px; }
+    
+.precioservicio { margin: 9px 0 9px 9px; }
+
+.btnagragar { cursor: pointer;
+    background-color: map-get($colores,magenta100m55k);
+    color: white;
+    font-size: 14px;
+    border: 0px;
+    border-radius: 0 9px;
+    padding: 7px 12px;
+    display: block;
+    margin: 0 auto 9px auto;
+    font-weight: bold;
+    &:hover {  background-color: map-get($colores,magenta100m77k); } }
+
+
+
+    /* CARRITO */
+.divcar { position: fixed;
+    font-size: 13px;
+    @media screen and (min-width: 1000px) and (max-width: 3840px) {
+        top: 108px;
+        right: 136px; }
+    @media screen and (min-width:0px) and (max-width:1000px) {
+        bottom: 18px;
+        right: 36px; } }
+
+.inputcabezacar { display: none; }
+
+.labelcabezacar { width: 288px;
+    background-color: map-get($colores,magenta100m55k);
+    align-items: center;
+    font-size: 17px;
+    font-weight: 900;
+    padding: 9px 0 3px 0;
+    border-radius: 0 12px 0 0;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    @media screen and (min-width:0px) and (max-width:1000px) { 
+        &:hover { cursor: pointer;
+            background-color: map-get($colores,magenta100m77k); }
+        border-bottom: 7px solid map-get($colores,magenta100m55k);
+        right: 18px; } }
+
+.noverpc {
+    @media screen and (min-width:1000px) and (max-width:3840px) { 
+        display: none;; } }
+
+.iconocar, .titulocar, .cantidarticulos { margin: 0; padding: 0; }
+
+#showCarBTN:checked ~ .interiorcar { display: block; }
+
+.interiorcar { width: 288px;
+    background-color: white;
+    border: 3px solid map-get($colores,magenta100m55k);
+    border-radius: 0 0 0 18px;
+    @media screen and (min-width: 0px) and (max-width: 1000px) {
+        display: none; } }
+
+.ulcardatos {   background-color: map-get($colores,negro93k);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 3px 9px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center; }
+
+.licardatos { list-style: none; }
+
+.ulcaritems { height: 144px;
+	overflow: scroll;
+    margin: 3px 0 0 0;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-align: left; }
+
+.textoredess { text-align: center;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 16px; }
+
+.mensaje-alerta { background-color: red;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    padding: 3px 0;
+    margin-top: 0;
+    margin-bottom: 3px; }
+
+  /* Nuevo estilo para el botón X de eliminar */
+    .licaritem { list-style: none;
+        display: flex; /* Añadido para habilitar flexbox para el espaciado */
+        align-items: center; /* Alinea los ítems verticalmente */ }
+
+    .licaritem .btn-eliminar-item {
+        background-color: #83004C; /* Morado de PubliZoom */
+        color: white;
+        border: 0px; /* Borde del mismo color */
+        cursor: pointer;
+        margin-right: 5px; /* Margen para separar de la cantidad */
+        padding: 1px 4px; /* Ajusta el padding para el tamaño de la X */
+        font-weight: 800;
+        font-size: 10px; /* Tamaño del botón X vuelto a como estaba en tu código original */
+        border-radius: 3px; /* Bordes ligeramente redondeados */ }
+
+    .licaritem .btn-eliminar-item:hover {
+        background-color: #51002f; /* Un morado más oscuro al pasar el mouse */ }
+
+    .licaritem input[type="number"] { /* Estilo para el input de cantidad */
+        width: 36px;
+        margin-right: 20px; /* Separación de la descripción */ }
+    
+    /* INCLUIR REDES CARRITO */
+    .ulredess { display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        font-size: 24px; }
+
+    .liredess { list-style: none; }
+
+// Cambiar Moneda
+.contenedorcambiarmoneda { text-align: right;
+    padding: 0 18px;
+    width: 100%;
+    display: block; }
+
+.label-cambio-moneda { position: relative;
+    display: inline-block;
+    width: 72px;
+    height: 27px; }
+
+.label-cambio-moneda input { opacity: 0;
+    width: 0;
+    height: 0; }
+
+.control-circular-moneda { display: block;
+    cursor: pointer;
+    margin: -16px 18px 0 0;
+    height: 27px;
+    width: 72px;
+    background-color: map-get($colores,azul100c44k); /* Azul */
+    transition: .4s;
+    border-radius: 34px; }
+
+.control-circular-moneda:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 5px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%; }
+
+input:checked + .control-circular-moneda {
+    background-color: map-get($colores,verde100c100y22k); /* Verde */ }
+
+input:checked + .control-circular-moneda:before {
+    transform: translateX(43px); }
+
+#divisa { display: block;
+    font-weight: bold; }
+
+// Precios
+    .contenedorprecios { display: flex;
+        margin: 0;
+        padding: 0; }
+
+    .precios { text-align: center;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        font-weight: 400; }
+
+    .costoscarrito { margin: 0;
+        padding: 3px 9px;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+        background-color: map-get($colores,amarillo33a); }
+    
+    .totalapagar { font-weight: bolder;
+        text-align: center;
+        width: 282px;
+        background-color: map-get($colores,amarillo100a); }
+
+    .preciototal-car {
+        margin-left: auto; /* Esto empuja el elemento a la derecha dentro de un contenedor flex */
+        text-align: right; }
+
+    .limimppago { display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        // border-top: map-get($colores,negro11k) solid 0.5px;
+        // border-bottom: map-get($colores,negro11k) solid 0.5px;
+        margin-bottom: 9px;
+        padding: 0 9px;
+        font-size: 14px; }
+
+    .vaciar-carrito { font-weight: bold;
+        font-style: italic;
+        text-align: right;
+        padding: 0 0 3px 3px;
+        text-decoration: underline;
+        background-color: white;
+        color: #83004C;
+        border: none;
+        cursor: pointer; }
+
+    .btn-imprimir { color: map-get($colores,magenta100m77k);
+        font-size: 18px;
+        &:hover { cursor: pointer; } }
+
+    .gestpago { background-color: map-get($colores,azul44c);
+        color: black;
+        margin: 3px 0;
+        padding: 6px 15px;
+        border: 0px;
+        border-radius: 0 9px;
+        text-decoration: none;
+        font-weight: 900;
+        &:hover {
+            background-color: map-get($colores,azul100c44k);
+            cursor: pointer;
+            color: white; } }
+
+    .gestpago.disabled { background-color: #cccccc;
+        cursor: not-allowed;
+        opacity: 0.7; }
+
+/* --- INICIO DE CAMBIOS PARA LAS FLECHAS --- */
+
+/* Ocultar las flechas por defecto en móvil */
+#mostrarCar, 
+#ocultarCar {
+    @media screen and (min-width: 0px) and (max-width: 1000px) {
+        display: none;
+    }
+}
+
+/* Mostrar la flecha hacia arriba cuando el carrito está cerrado en móvil */
+#showCarBTN:not(:checked) ~ .labelcabezacar #mostrarCar {
+    @media screen and (min-width: 0px) and (max-width: 1000px) {
+        display: block;
+    }
+}
+
+/* Mostrar la flecha hacia abajo cuando el carrito está abierto en móvil */
+#showCarBTN:checked ~ .labelcabezacar #ocultarCar {
+    @media screen and (min-width: 0px) and (max-width: 1000px) {
+        display: block;
+    }
+}
+
+/* --- FIN DE CAMBIOS PARA LAS FLECHAS --- */

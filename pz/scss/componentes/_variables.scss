@@ -1,0 +1,141 @@
+// DESKTOP
+// @media screen and (min-width: 960)	{ }
+
+// MOVIL
+// @media screen and (min-width:0px) and (max-width:959px) { }
+
+$colores:
+	(	negro97k: #2D2A2B,
+		negro93k: #393839,
+		negro77k: #5F6062,
+		negro55k: #8A8C8E,
+		negro33k: #B6B8BA,
+		negro11k: #E4E5E6,
+
+		magenta100m77k: #5C002F,
+		magenta100m55k: #83004C,
+		magenta100m33k: #AB0066,
+		magenta100m: #EC008C,
+		magenta77m: #F062A4,
+		magenta44m: #F5A6C8,
+
+		azul100c66k: #005374,
+		azul100c44k: #0079C1,
+		azul100c: #00AEEF,
+		azul44c: #82D3F6,
+
+		verde100c100y44k: #00662A,
+		verde100c100y22k: #007F36,
+		verde100c100y: #009640,
+		verde50c50y: #8EC89A,
+
+		amarillo100a44k: #A39800,
+		amarillo100a: #FFF200,
+		amarillo33a: #FFFABC, );
+
+// COLOR Y TAMANO TEXTO
+// %titulogrande
+// 	{	color: map-get($colores,negro55k);
+// 		@extend %marginypaddign0;
+// 		text-align: center;
+// 		font-size: 10em; }
+
+// %titulopequeno
+// 	{	color: map-get($colores,negro55k);
+// 		@extend %marginypaddign0;
+// 		text-align: center;
+// 		font-size: 3em; }
+
+%contenidogrande
+	{	color: map-get($colores,negro93k);
+		font-size: 36px; }
+
+%contenidomedio
+	{	color: map-get($colores,negro93k);
+		font-size: 24px; }
+
+%contenidopequeno
+	{	color: map-get($colores,negro93k);
+		font-size: 16px; }
+
+// MARGIN Y PADDING
+%marginypaddign0
+	{	padding: 0;
+		margin: 0; }
+		
+// PADDING RESPONSIVE
+$padding:
+	(	topgrande: 72px,
+		ritghgrande: 72px,
+		bottomgrande: 72px,
+		leftgrande: 72px,
+		toppequeno: 36px,
+		ritghpequeno: 36px,
+		bottompequeno: 36px,
+		leftpequeno: 36px, );
+
+%paddingresponsivegrande
+	{	padding-left: map-get($padding,leftgrande);
+		padding-right: map-get($padding,ritghgrande); }
+
+%paddingresponsivegrandeizquierdo
+	{	padding-left: map-get($padding,leftgrande);box-sizing: border-box; }
+
+%paddingresponsivegrandederecho
+	{	padding-right: map-get($padding,ritghgrande); }
+
+%paddingresponsivepequeno
+	{	padding-left: map-get($padding,leftpequeno);
+		padding-right: map-get($padding,ritghpequeno); }
+
+%paddingresponsivepequenoizquierdo
+	{	padding-left: map-get($padding,leftpequeno); }
+
+%paddingresponsivepequenoderecho
+	{	padding-right: map-get($padding,ritghpequeno); }	
+
+// BOTON DE REGISTRO
+%BotonRegistro
+	{	width: 88%;
+		height: 45px;
+		margin-right: auto;
+		margin-left: auto;
+		border-radius: 0 27px;
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: bold;
+		background-color: map-get($colores,azul100c44k);
+		&:hover {
+			cursor: pointer;
+			background-color: map-get($colores,azul100c66k); }
+		&:active {
+			background-color: map-get($colores,azul100c66k); } }
+
+// BOTON AGREGAR
+%agregar
+	{	position: absolute;
+		right: map-get($padding,ritghgrande);
+		margin-top: 31%;
+		padding: 6px 18px;
+		background-color: map-get($colores,magenta100m55k);
+		border-radius: 18px;
+		text-decoration: none;
+		color: map-get($colores,negro11k);
+		font-size: 18px;
+		font-weight: bold;
+		cursor: pointer;
+		&:hover {
+			background-color: map-get($colores,magenta100m77k);
+			color: #ffffff; }
+		&:active {
+			background-color: map-get($colores,amarillo100a44k); }
+		@media screen and (min-width:0px) and (max-width:959px) {
+			font-size: 10px;
+			padding: 3px 9px;
+			right: map-get($padding,ritghpequeno); } }
+
+// RESALTAR TEXTO
+%resaltartexto
+	{	color: map-get($colores,magenta100m55k);
+		font-style: italic;
+		font-weight: bold; }

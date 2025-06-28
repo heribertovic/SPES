@@ -1,0 +1,165 @@
+@import "../../../scss/componentes/variables";
+// 8k    7.680 x 4.320
+// DESKTOP
+// @media screen and (min-width: 960)	{ }
+
+// MOVIL
+// @media screen and (min-width:0px) and (max-width:959px) { }
+
+// TIPO DE PRODUCTO
+// .titulotienda
+//     {    margin-top: 36px; }
+
+// .marpadd { @extend %marginypaddign0; }
+
+.divresumenpago { max-width: 1000px;
+    min-width: 288px; }
+
+.titresumenpago { margin-top: 18px; }
+
+.detallesfacturaypagos { font-size: 12px; }
+
+.detallesfactura { background-color: white;
+    margin-bottom: 18px; }
+
+.ulfacturacabeza { background-color: map-get($colores,negro93k);
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;  }
+
+.lifacturacabeza { list-style: none; }
+
+.boderblanco { border-right: 3px solid white; }
+
+// .licardatos { 
+//     border: 1px dashed map-get($colores,negro11k);
+// }
+
+.lifacturacabeza, .licardatosfactura, .tituloydescripcionserviciofactura { padding: 9px 6px; }
+
+.anchocantidad { width: 54px;
+    // background-color: aqua;
+     }
+
+.anchodescripcion {
+    max-width: 400px;
+    width: 400px;
+    min-width: 180px;
+    // background-color: orange;
+ }
+
+.anchopreciounitario { width: 135px;
+    // background-color: green;
+ }
+
+.anchoprecioporcantidad { width: 135px;
+    // background-color: red;
+ }
+
+.anchocantidad, .anchopreciounitario, .anchoprecioporcantidad { text-align: center; }
+
+.items-factura {
+    border: 3px solid map-get($colores,negro93k);
+    border-top: 0px;
+
+ }
+
+.ulfacturacabeza, .liarticulofactura { padding: 0;
+    display: flex;
+    justify-content: space-between; }
+
+.liarticulofactura { margin: 0;
+    border-bottom: 1px solid map-get($colores,negro11k); }
+
+.tituloserviciofactura { font-weight: bold; }
+
+.tituloserviciofactura, .descripcionserviciofactura, .redes-asociadas { margin-top: 0;
+    margin-bottom: 0; }
+
+.redes-asociadas { font-style: italic;
+    text-decoration: underline;
+ }
+
+.contenedornotasypreciosfactura { display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+        @media screen and (min-width: 0px) and (max-width: 580px) {
+        display: block;
+        width: 100%; }
+ }
+
+.ulnotasimportantes { margin: 0;
+    padding: 9px 9px 0 9px;
+    // max-width: 576px;
+    // background-color: aqua;
+    @media screen and (min-width: 1266px) and (max-width: 3840px) {
+        width: 711px; }
+    @media screen and (min-width: 999px) and (max-width: 1266px) {
+        width: 490px; }
+    @media screen and (min-width: 815px) and (max-width: 999px) {
+        width: 432px; }
+    // @media screen and (min-width: 580px) and (max-width: 815px) {
+    //     width: 100%; }
+    @media screen and (min-width: 0px) and (max-width: 815px) {
+        width: 100%; }
+}
+
+.titulonotasimportantes { margin: 0 0 3px 0;
+    font-weight: bold;
+}
+.contenidonotasimportantes { margin: 0 0 3px 36px;
+    padding: 0; }
+
+.ulpreciosfactura { border: 3px solid map-get($colores,negro93k);
+    height: 138px;
+    border-top: 0px;
+    margin: 0;
+    padding-left: 0;
+    text-align: right;
+    width: 288px;
+    background-color: map-get($colores,amarillo33a);
+    @media screen and (min-width: 0px) and (max-width: 815px) {
+        width: 100%;
+        text-align: center;
+        border: 3px solid map-get($colores,negro93k); } }
+
+.costoscarritofactura { background-color: map-get($colores,amarillo33a); 
+    list-style: none;
+    padding: 6px; }
+
+.totalapagarfactura { background-color: map-get($colores,amarillo100a);
+    border-bottom: 3px solid map-get($colores,negro93k);
+    width: 100%;
+    font-weight: bold; }
+
+// VOLVER AL CARRITO
+.volveralcarro { padding: 18px;
+    border-radius: 0 9px;
+    border: 1px solid map-get($colores,negro33k); }
+
+// DETALLES DE PAGOS
+.detallespagos { border: 9px solid map-get($colores,magenta100m55k);
+    padding: 36px;
+    box-sizing: border-box;
+    margin: 36px 0 0 0; }
+
+.opciones-pago { display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+
+.labelopcionespago { font-weight: bolder;
+    text-align: center;
+    margin: 9px 0; }
+
+.inputmetodosdepago, .imgmetodosdepago { display: block; }
+
+.imgmetodosdepago { margin-top: 9px;
+    width: 180px; }
+
+#detalles-pago-adicionales { padding: 36px;
+    box-sizing: border-box;
+    width: 288px;
+    border: 3px solid map-get($colores,negro97k);
+    margin-bottom: 18px; }
+

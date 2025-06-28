@@ -1,0 +1,60 @@
+@import "componentes/variables";
+// 8k    7.680 x 4.320
+// DESKTOP
+// @media screen and (min-width: 960)	{ }
+
+// MOVIL
+// @media screen and (min-width:0px) and (max-width:959px) { }
+
+// SERVICIOS
+.articuloservicio
+    {   display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 36px;
+        width: 100%;
+        height: 100%; }
+.tituloprincipal
+    {   margin: 144px 0 0 0; }
+.sectionservicio
+    {   width: 288px;
+
+        padding: 9px;
+        margin-bottom: 72px;
+        display: block;
+        text-align: center;
+
+        margin: 0 auto; }
+
+// .aclicservicio
+//     {   padding: 9px;
+//         margin-bottom: 72px;
+//         display: block;
+//         text-align: center; }
+
+// .aclicservicio:hover
+//     {   border: map-get($colores,negro33k) solid 1px;
+//         box-shadow: 0 12px 18px map-get($colores,negro33k); }
+        
+.iconoservicio
+    {   width: 144px;
+        height: 144px;
+        font-size: 72px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        border: map-get($colores,magenta100m55k) solid 9px;
+		border-radius: 100%; }
+.tituloservicio
+    {   font-size: 22px;
+        border-bottom: map-get($colores,magenta100m55k) solid 2px;
+        margin: 0;
+        padding: 6px 0 6px 0; }
+.contenidoservicio
+    {   margin: 6px 0 0 0;
+        font-size: 16px;
+        font-weight: normal; }
+.left
+    {   margin: 0 0 0 36px;
+        text-align: left; }
+.left::before
+    {   content: '• '; }

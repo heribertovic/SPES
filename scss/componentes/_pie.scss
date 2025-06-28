@@ -1,0 +1,47 @@
+@import "variables";
+// 8k    7.680 x 4.320
+// DESKTOP
+// @media screen and (min-width: 960)	{ }
+
+// MOVIL
+// @media screen and (min-width:0px) and (max-width:959px) { }
+
+// QUIENES SOMOS
+// .pie
+// 	{	padding: 0;
+// 		margin-bottom: 0; }
+.piediv
+    {   margin-bottom: 0;
+        padding: 0; }
+.piefooter
+    {   background-image: url(../img/texturas/zigzagwool.png);
+        @extend %paddingresponsivegrande;
+        width: 100%;
+        @media screen and (min-width:0px) and (max-width:959px) {
+            padding-left: map-get($padding,leftpequeno);
+            padding-right: map-get($padding,ritghpequeno); } }
+.addresfooter
+    {   height: 360px;
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (min-width:0px) and (max-width:959px) {
+            height: 100%;
+            flex-direction: column; } }
+.afooter
+    {   color: map-get($colores,negro55k);
+        text-decoration: none;
+        text-align: center;
+        width: 288px;
+        font-size: 72px;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: map-get($colores,negro11k); }
+        &:active {
+            background-color: rgba(255, 255, 0, 0.5);
+            color: map-get($colores,negro11k); }
+        @media screen and (min-width:0px) and (max-width:959px) {
+            height: 120px; } }
+.afooterp
+    { display: none; }

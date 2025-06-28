@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* Asegúrate de que esta sección esté en tu archivo CSS */
+.spa-view {
+  display: none;
+  /* Oculta todas las vistas por defecto */
+  /* Puedes añadir otras propiedades si necesitas, como: */
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  /* transition: opacity 0.5s ease-in-out; */ }
+
+.spa-view.active-spa-view {
+  display: block;
+  /* Muestra solo la vista que tiene esta clase */
+  /* O si usas otras propiedades, serían: */
+  /* opacity: 1; */
+  /* visibility: visible; */ }
